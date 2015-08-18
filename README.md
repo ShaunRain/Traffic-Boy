@@ -5,3 +5,10 @@ Servlet server: 服务器，1)接受用户上传的交通状况图片和信息�
                         2)接收用户查询请求，按交通情景分类返回Json数据。
 
 FileUp: Server程序
+
+![](https://github.com/ShaunRain/Traffic-Boy/raw/master/screenshot/s0.png) 
+![](https://github.com/ShaunRain/Traffic-Boy/raw/master/screenshot/s1.png) 
+![](https://github.com/ShaunRain/Traffic-Boy/raw/master/screenshot/s2.png) 
+![](https://github.com/ShaunRain/Traffic-Boy/raw/master/screenshot/s3.png) 
+![](https://github.com/ShaunRain/Traffic-Boy/raw/master/screenshot/s4.png) 
+![](https://github.com/ShaunRain/Traffic-Boy/raw/master/screenshot/s5.png) 
