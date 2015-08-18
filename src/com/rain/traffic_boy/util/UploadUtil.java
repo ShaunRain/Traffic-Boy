@@ -48,7 +48,7 @@ public class UploadUtil {
 				progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 				progress.show();
 
-				client.post("http://shaunrain.oicp.net/FileUp/UploadServlet",
+				client.post("http://shaunrain.zicp.net/FileUp/UploadServlet",
 						params, new AsyncHttpResponseHandler() {
 
 							@Override
@@ -80,7 +80,7 @@ public class UploadUtil {
 
 	public static void server2mobile(Context context, String type) {
 
-		String serverPath = "http://shaunrain.oicp.net/FileUp/QueryServlet?type="
+		String serverPath = "http://shaunrain.zicp.net/FileUp/QueryServlet?type="
 				+ type;
 		try {
 			URL url = new URL(serverPath);
@@ -104,18 +104,15 @@ public class UploadUtil {
 				conn.disconnect();
 
 				String result = new String(baos.toByteArray());
-				// System.out.println("result: " + result);
 				String[] results = result.split("[$]");
 				for (String r : results) {
 					if (r.length() != 0) {
-						Log.d("jsonPath", r);
 						URL json = new URL(r);
 						HttpURLConnection con = (HttpURLConnection) json
 								.openConnection();
 						con.setConnectTimeout(5000);
 						con.setRequestMethod("GET");
 						int co = con.getResponseCode();
-						Log.d("jsonCode", co + "");
 						if (co == 200) {
 							File jsonFile;
 							if (r.endsWith("clear.json")) {
